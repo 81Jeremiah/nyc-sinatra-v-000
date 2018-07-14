@@ -19,7 +19,7 @@
   <input type="text" id="new_title" name="title[name]">
 
   <p>Does your landmark have any of the below figures?</p>
-    <% FIgure.all.each do |figure| %>
+    <% Figure.all.each do |figure| %>
       <br><input id="landmark_<%= figure.id %>" type="checkbox" name="landmark[figure_ids][]" value="<%= figure.id %>"><%= figure.name %></br>
     <% end %>
   <p>Or please add a new landmark: </p>
