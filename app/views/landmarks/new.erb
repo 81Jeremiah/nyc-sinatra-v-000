@@ -22,7 +22,7 @@
     <% Figure.all.each do |figure| %>
       <br><input id="landmark_<%= figure.id %>" type="checkbox" name="landmark[figure_ids][]" value="<%= figure.id %>"><%= figure.name %></br>
     <% end %>
-  <p>Or please add a new landmark: </p>
+  <p>Or please add a new figure: </p>
   <label for="new_figure">Figure Name: </label>
   <input type="text" id="new_figure" name="figure[name]">
 
