@@ -17,7 +17,7 @@ class LandmarksController < ApplicationController
    if !params[:title][:name].empty?
      @landmark.titles << Title.create(params[:title])
    end
-   @figure.save
+   @landmark.save
     redirect to "/landmarks/#{@landmark.id}"
   end
 
