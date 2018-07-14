@@ -1,6 +1,6 @@
 <h1>Show all Landmarks</h1>
 
-<% Landmark.all.each do |landmark| %>
+<% @landmarks.each do |landmark| %>
 <P><%= landmark.name %>
    <% landmark.titles.each do |title| %>
    <%= title.name %>
