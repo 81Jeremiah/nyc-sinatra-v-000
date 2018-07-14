@@ -12,19 +12,19 @@
 
   <p>Does your figure have any of the below titles?</p>
     <% Title.all.each do |title| %>
-      <br><input  type="checkbox" id="title_<%= title.id %>"name="figure[title_ids][]" value="<%= title.id %>"><%= title.name %></br>
+      <br><input  type="checkbox" id="title_<%= title.id %>"name="landmark[title_ids][]" value="<%= title.id %>"><%= title.name %></br>
     <% end %>
   <p>Or please add a new title: </p>
   <label for="new_title">Title Name: </label>
   <input type="text" id="new_title" name="title[name]">
 
-  <p>Does your figure have any of the below landmarks?</p>
-    <% Landmark.all.each do |landmark| %>
-      <br><input id="landmark_<%= landmark.id %>" type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>"><%= landmark.name %></br>
+  <p>Does your landmark have any of the below figures?</p>
+    <% Figure.all.each do |figure| %>
+      <br><input id="landmark_<%= figure.id %>" type="checkbox" name="landmark[figure_ids][]" value="<%= landmark.id %>"><%= landmark.name %></br>
     <% end %>
   <p>Or please add a new landmark: </p>
-  <label for="new_landmark">Landmark Name: </label>
-  <input type="text" id="new_landmark" name="landmark[name]">
+  <label for="new_figure">Figure Name: </label>
+  <input type="text" id="new_figure" name="figure[name]">
 
 
 
