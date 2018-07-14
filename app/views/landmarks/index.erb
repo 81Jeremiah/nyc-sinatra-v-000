@@ -1,1 +1,11 @@
 <h1>Show all Landmarks</h1>
+
+<% Landmark.all.each do |landmark| %>
+<P><%= landmark.name %>
+   <% landmark.titles.each do |title| %>
+   <%= title.name %>
+   <%end%>
+   <% landmark.figures.each do |figure| %>
+   <%= figure.name %>
+   <%end%>
+ <%end%>
