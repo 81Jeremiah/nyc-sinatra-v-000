@@ -1,6 +1,7 @@
 <h1>Show all Landmarks</h1>
 
 <% @landmarks.each do |landmark| %>
+binding.pry
 <P><%= landmark.name %>
    <% landmark.titles.each do |title| %>
    <%= title.name %>
