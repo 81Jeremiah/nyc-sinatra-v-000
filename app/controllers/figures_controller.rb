@@ -41,8 +41,8 @@ class FiguresController < ApplicationController
    if !params[:title][:name].empty?
      figure.titles << Title.create(params[:title])
    end
-
    figure.save
+   
     redirect to "/figures/#{figure.id}"
   end
 end
