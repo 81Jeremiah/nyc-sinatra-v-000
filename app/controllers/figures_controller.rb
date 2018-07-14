@@ -2,7 +2,6 @@ class FiguresController < ApplicationController
 
   get '/figures' do
      @figures = Figure.all
-     binding.pry
      erb :'/figures/index'
    end
 
@@ -12,7 +11,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Figure.create(params[:figure])
-    #binding.pry
+    binding.pry
     if !params[:landmark][:name].empty?
      @figure.landmarks << Landmark.create(params[:landmark])
    end
