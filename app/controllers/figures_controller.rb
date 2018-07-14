@@ -2,6 +2,7 @@ class FiguresController < ApplicationController
 
   get '/figures' do
      @figures = Figure.all
+     binding.pry
      erb :'/figures/index'
    end
 
